@@ -1,0 +1,27 @@
+$light-grey: #e8e8e8;
+$white: #ffffff;
+$z-index: 1080;
+
+.search.input-group {
+    padding-top: 25px;
+
+    button.search-button {
+    position: absolute;
+    top: 3px;
+    left: -36px;
+    background-color: $white;
+    border: none;
+    z-index: $z-index;
+
+}
+
+input[text].search-input {
+    padding-right: 36px;
+}
+
+.fa.fa-search {
+    font-size: 22px;
+    background-color: $white;
+}
+}
+

@@ -1,0 +1,88 @@
+<section class="cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-sm-12 text-lg-left text-center">
+        <h2 class="header-label">
+          Welcome! Please select your flight!
+        </h2>
+      </div>
+
+      <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+           <a class="btn btn-full" ng-click="home.getFlights(home.validate());">
+             Find Some Flights
+             </a>
+          </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 text-center">
+        <label class="departure-label departure">Departure:</label>
+        </div>
+        <div class="col-xs-4 text-center">
+          <nav class="nav-menu-container">
+            <ul class="nav-menu sf-js-enabled sf-arrows">
+              <li>
+                <div class="col-xs-12">
+                  Please Choose Country :
+                </div>
+                <div class="col-xs-12">
+                  <airport-selector list-type="countries" title="departureCountry"></airport-selector>
+                </div>
+              </li>
+              <li>
+                <div class="col-xs-12">
+                  {{:: home.data.messages['choose_departure_airport']}}
+                </div>
+                <div class="col-xs-12">
+                  <airport-selector list-type="airports" depends-on="departureCountry" title="departureAirport"></airport-selector>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <hr />
+    </div>
+    <div class="col-xs-4 text-center">
+        <label class="departure-label">Destination:</label>
+        </div>
+    <div class="col-xs-4 text-center">
+      <nav class="nav-menu-container">
+        <ul class="nav-menu sf-js-enabled sf-arrows">
+          <li>
+            <div class="col-xs-12">
+              Please Choose Country:
+            </div>
+            <div class="col-xs-12">
+              <airport-selector list-type="countries" title="destinationCountry"></airport-selector>
+            </div>
+          </li>
+          <li>
+            <div class="col-xs-12">
+              {{:: home.data.messages['choose_departure_airport']}}
+            </div>
+            <div class="col-xs-12">
+              <airport-selector list-type="airports" depends-on="destinationCountry" title="destinationAirport"></airport-selector>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ui-view></ui-view>
+    </div>
+  </div>
+  </div>
+</section>

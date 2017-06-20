@@ -1,0 +1,31 @@
+#home-header {
+    text-align: center;
+}
+
+nav {
+    margin-left: 25%;
+    ul.nav-menu {
+    li{
+        color: white;
+        padding: 20px;
+    }
+    
+}
+}
+
+h2.header-label {
+    margin-bottom: 15px;
+}
+
+.departure-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    &.departure {
+        margin-top: 15px;
+        position: relative;
+        left: -54px;
+    }
+}
+
